@@ -1,0 +1,103 @@
+/*
+ * macOS ABC Extended dead-key macros for Czech (and a few DE/SK) characters.
+ *
+ * IMPORTANT: the host input source MUST be "ABC Extended" (not US / ABC).
+ * On US/ABC, ⌥V is √ — that is exactly the failure mode "√e√s√c…".
+ *
+ *   Acute  ⌥E + letter  → á é í ó ú ý ĺ ŕ
+ *   Caron  ⌥V + letter  → č ď ě ň ř š ť ž ľ
+ *   Ring   ⌥K + u       → ů
+ *   Umlaut ⌥U + letter  → ä ö ü
+ *   Circ   ⌥I + o       → ô
+ *   ß                   → ⌥S
+ *
+ * Macros press Left Option explicitly (more reliable than RA()/LA() chords
+ * over BLE) and use a short gap so macOS can arm the dead key.
+ */
+
+#define CS_DK_PAIR(name, dead_key, letter) \
+    / { \
+        macros { \
+            name ## _l: name ## _l { \
+                compatible = "zmk,behavior-macro"; \
+                #binding-cells = <0>; \
+                wait-ms = <30>; \
+                tap-ms = <30>; \
+                bindings \
+                    = <&macro_press &kp LALT> \
+                    , <&macro_tap &kp dead_key> \
+                    , <&macro_release &kp LALT> \
+                    , <&macro_tap &kp letter>; \
+            }; \
+            name ## _u: name ## _u { \
+                compatible = "zmk,behavior-macro"; \
+                #binding-cells = <0>; \
+                wait-ms = <30>; \
+                tap-ms = <30>; \
+                bindings \
+                    = <&macro_press &kp LALT> \
+                    , <&macro_tap &kp dead_key> \
+                    , <&macro_release &kp LALT> \
+                    , <&macro_tap &kp LS(letter)>; \
+            }; \
+        }; \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-mod-morph"; \
+                #binding-cells = <0>; \
+                bindings = <&name ## _l>, <&name ## _u>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+                keep-mods = <0>; \
+            }; \
+        }; \
+    };
+
+/* Acute ⌥E */
+CS_DK_PAIR(cs_aa,    E, A) // á/Á
+CS_DK_PAIR(cs_ea,    E, E) // é/É
+CS_DK_PAIR(cs_ia,    E, I) // í/Í
+CS_DK_PAIR(cs_oa,    E, O) // ó/Ó
+CS_DK_PAIR(cs_ua,    E, U) // ú/Ú
+CS_DK_PAIR(cs_ya,    E, Y) // ý/Ý
+CS_DK_PAIR(l_acute,  E, L) // ĺ/Ĺ
+CS_DK_PAIR(r_acute,  E, R) // ŕ/Ŕ
+
+/* Caron ⌥V */
+CS_DK_PAIR(cs_cc,    V, C) // č/Č
+CS_DK_PAIR(cs_dc,    V, D) // ď/Ď
+CS_DK_PAIR(cs_ec,    V, E) // ě/Ě
+CS_DK_PAIR(cs_nc,    V, N) // ň/Ň
+CS_DK_PAIR(cs_rc,    V, R) // ř/Ř
+CS_DK_PAIR(cs_sc,    V, S) // š/Š
+CS_DK_PAIR(cs_tc,    V, T) // ť/Ť
+CS_DK_PAIR(cs_zc,    V, Z) // ž/Ž
+CS_DK_PAIR(l_caron,  V, L) // ľ/Ľ
+
+/* Ring ⌥K */
+CS_DK_PAIR(cs_ur,    K, U) // ů/Ů
+
+/* Umlaut ⌥U */
+CS_DK_PAIR(a_dia,    U, A) // ä/Ä
+CS_DK_PAIR(o_dia,    U, O) // ö/Ö
+CS_DK_PAIR(u_dia,    U, U) // ü/Ü
+
+/* Circumflex ⌥I */
+CS_DK_PAIR(o_circ,   I, O) // ô/Ô
+
+/* ß — Option+S */
+/ {
+    macros {
+        sharp_s: sharp_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings \
+                = <&macro_press &kp LALT> \
+                , <&macro_tap &kp S> \
+                , <&macro_release &kp LALT>;
+        };
+    };
+};
+
+#undef CS_DK_PAIR
