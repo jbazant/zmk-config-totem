@@ -57,9 +57,9 @@
             display-name = "Base";
             bindings = <
                 &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y    &kp U         &kp I        &kp O       &kp P
-                &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J   &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
+                &hm LCTRL A  &hm LALT S  &hm LGUI D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J   &hm RGUI K  &hm RALT L  &hm RCTRL SEMICOLON
 &lt Fun ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N    &kp M         &kp COMMA    &kp DOT     &kp SLASH           &lt Czech APOSTROPHE
-                                        &mt LCTRL DEL  &lt Nav TAB   &kp SPACE    &kp RET  &lt Sym BSPC  &lt 4 MINUS
+                                        &mt LGUI DEL  &lt Nav TAB   &kp SPACE    &kp RET  &lt Sym BSPC  &lt 4 MINUS
             >;
         };
 
@@ -77,7 +77,7 @@
             display-name = "Symbols";
             bindings = <
         &kp EXCL  &kp AT  &kp HASH        &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp KP_ASTERISK       &kp SQT          &kp DQT
-        &trans    &trans  &hm LCTRL LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT DE_EURO  &hm RCTRL DE_SECTION  &hm RALT CS_DEG  &trans
+        &trans    &trans  &hm LGUI LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT DE_EURO  &hm RGUI DE_SECTION  &hm RALT CS_DEG  &trans
 &trans  &trans    &trans  &kp RBRC        &kp RBKT         &kp RPAR       &kp UNDER  &kp EQUAL          &trans                &trans           &kp SLASH  &trans
                           &trans          &trans           &trans         &trans     &trans             &trans
             >;
