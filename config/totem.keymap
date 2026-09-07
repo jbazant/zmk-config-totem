@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <locale/keys_cs_programmers.h>
 
 #define Base        0
 #define Nav         1
@@ -94,8 +95,8 @@
 
         czech {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &kp CS_E_CARON   &kp CS_S_CARON  &kp CS_C_CARON  &kp CS_R_CARON  &kp CS_Z_CARON    &kp CS_Y_ACUTE  &kp CS_A_ACUTE  &kp CS_I_ACUTE  &kp CS_E_ACUTE  &kp CS_U_ACUTE
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp CS_U_RING
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
