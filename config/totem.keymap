@@ -88,7 +88,7 @@
             bindings = <
         &trans  &trans  &kp C_MUTE      &kp C_VOLUME_DOWN   &kp C_VOLUME_UP     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5
         &trans  &trans  &trans          &trans              &trans              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
-&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT          &kp F12     &kp F12     &trans      &trans      &kp K_LOCK   &trans
+&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_NEXT          &kp F12     &kp F12     &trans      &trans      &kp C_AL_LOCK   &trans
                         &trans          &trans              &trans              &trans      &trans      &trans
             >;
         };
