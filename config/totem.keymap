@@ -67,7 +67,7 @@
             display-name = "Navigation";
             bindings = <
               &kp TILDE       &kp HOME   &kp UP_ARROW  &kp END               &kp PG_UP                &kp KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT             &kp PAGE_DOWN            &kp KP_MULTIPLY  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT             &kp PAGE_DOWN            &kp KP_MULTIPLY  &hm RSHFT NUMBER_4   &hm RGUI NUMBER_5  &hm RALT NUMBER_6  &hm RCTRL PLUS
 &kp LEFT_ALT  &kp LEFT_WIN    &kp COMMA  &kp UNDER     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans
                                          &trans        &trans                &trans                   &trans           &trans        &kp DOT
             >;
@@ -77,7 +77,7 @@
             display-name = "Symbols";
             bindings = <
         &kp EXCL  &kp AT  &kp HASH        &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp KP_ASTERISK       &kp SQT          &kp DQT
-        &trans    &trans  &hm LGUI LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT DE_EURO  &hm RGUI DE_SECTION  &hm RALT CS_DEG  &trans
+        &trans    &trans  &hm LGUI LBRC  &hm LSHIFT LBKT   &kp LPAR       &kp AT     &hm RSHFT DE_EURO  &hm RGUI DE_SECTION   &hm RALT CS_DEG  &hm RCTRL BACKSLASH
 &trans  &trans    &trans  &kp RBRC        &kp RBKT         &kp RPAR       &kp UNDER  &kp EQUAL          &trans                &trans           &kp SLASH  &trans
                           &trans          &trans           &trans         &trans     &trans             &trans
             >;
