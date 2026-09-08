@@ -46,17 +46,6 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-
-        lock: lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp LCTRL>
-                , <&kp LGUI>
-                , <&kp Q>
-                , <&kp LGUI>
-                , <&kp LCTRL>;
-        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -99,7 +88,7 @@
             bindings = <
         &trans  &trans  &kp C_MUTE      &kp C_VOLUME_DOWN       &kp C_VOLUME_UP    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
         &trans  &trans  &hm LGUI D      &hm LSHIFT C_BRI_DEC    &kp C_BRI_INC      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE        &kp C_NEXT         &kp F12  &kp F12  &trans  &trans  &lock  &trans
+&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE        &kp C_NEXT         &kp F12  &kp F12  &trans  &trans  &kp C_AL_COFFEE  &trans
                         &trans          &trans                  &trans             &trans   &trans   &trans
             >;
         };
