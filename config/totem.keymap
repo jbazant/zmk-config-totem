@@ -46,6 +46,17 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        lock: lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LCTRL>
+                , <&kp LGUI>
+                , <&kp Q>
+                , <&kp LGUI>
+                , <&kp LCTRL>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -78,7 +89,7 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH        &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp KP_ASTERISK       &kp SQT          &kp DQT
         &trans    &trans  &hm LGUI LBRC  &hm LSHIFT LBKT   &kp LPAR       &kp AT     &hm RSHFT DE_EURO  &hm RGUI DE_SECTION   &hm RALT CS_DEG  &hm RCTRL BACKSLASH
-&trans  &trans    &trans  &kp RBRC        &kp RBKT         &kp RPAR       &kp UNDER  &kp EQUAL          &trans                &trans           &kp SLASH  &trans
+&trans  &trans    &trans  &kp RBRC        &kp RBKT         &kp RPAR       &kp UNDER  &kp EQUAL          &trans                &trans           &trans    &trans
                           &trans          &trans           &trans         &trans     &trans             &trans
             >;
         };
@@ -86,10 +97,10 @@
         Fun {
             display-name = "FN";
             bindings = <
-        &trans  &trans  &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-        &trans  &trans  &trans          &trans             &trans             &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT         &kp F12  &kp F12  &trans  &trans  &kp C_AL_LOCK  &trans
-                        &trans          &trans             &trans             &trans   &trans   &trans
+        &trans  &trans  &kp C_MUTE      &kp C_VOLUME_DOWN       &kp C_VOLUME_UP    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+        &trans  &trans  &hm LGUI D      &hm LSHIFT C_BRI_DEC    &kp C_BRI_INC      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE        &kp C_NEXT         &kp F12  &kp F12  &trans  &trans  &lock  &trans
+                        &trans          &trans                  &trans             &trans   &trans   &trans
             >;
         };
 
