@@ -20,13 +20,13 @@
 #define Fun     3
 #define Czech   4
 
-// macOS ABC / ABC Extended Option shortcuts
-#define MAC_EURO    LS(RA(N2)) // €
-#define MAC_SECT    RA(N6)     // §
-#define MAC_DEG     LS(RA(N8)) // °
-#define MAC_CARON   RA(V)      // ˇ dead key
-#define MAC_ACUTE   RA(E)      // ´ dead key
-#define MAC_DIAER   RA(U)      // ¨ dead key
+// macOS Option shortcuts (Sym: work on US/ABC; dead keys need ABC Extended)
+#define MAC_EURO    LS(LA(N2)) // €
+#define MAC_SECT    LA(N6)     // §
+#define MAC_DEG     LS(LA(N8)) // °
+#define MAC_CARON   LA(V)      // ˇ dead key (ABC Extended only)
+#define MAC_ACUTE   LA(E)      // ´ dead key (ABC Extended only)
+#define MAC_DIAER   LA(U)      // ¨ dead key (ABC Extended only)
 
 &mt {
     quick-tap-ms = <100>;
@@ -54,10 +54,10 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // Hold = mod, tap = macOS dead-key macro (0-param; can't use plain &hm).
+        // Hold = mod, tap = 0-param dead-key macro → only one binding cell (&kp).
         csdc_ht: hold_tap_cs_dc {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -67,7 +67,7 @@
 
         cstc_ht: hold_tap_cs_tc {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -77,7 +77,7 @@
 
         csur_ht: hold_tap_cs_ur {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -87,7 +87,7 @@
 
         csnc_ht: hold_tap_cs_nc {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -226,7 +226,7 @@
             //╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮   ╭─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────╮
                                 &cs_ec            &cs_sc            &cs_cc            &cs_rc            &cs_zc                &cs_ya            &cs_aa            &cs_ia            &cs_ea            &cs_oa
             //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-                                &csdc_ht LCTRL 0  &trans            &trans            &cstc_ht LSHIFT 0 &trans                &cs_ua            &csur_ht RSHFT 0  &trans            &csnc_ht RALT 0   &trans
+                                &csdc_ht LCTRL    &trans            &trans            &cstc_ht LSHIFT  &trans                &cs_ua            &csur_ht RSHFT    &trans            &csnc_ht RALT     &trans
             //╭─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────╮
                 &trans          &kp MAC_CARON     &kp MAC_ACUTE     &kp MAC_DIAER     &sharp_s          &o_circ               &trans            &trans            &trans            &trans            &trans            &trans
             //╰─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┴─────────────────┴─────────────────╯
