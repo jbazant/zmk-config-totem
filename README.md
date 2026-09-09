@@ -32,14 +32,17 @@ Nick Coutsos' [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) is a
 - Video 1: https://www.youtube.com/watch?v=YwsutNf1WRA&t=143s
 
 ## Battery
-https://github.com/itouuuuuuuuu/zmk-battery-bar
+- https://github.com/itouuuuuuuuu/zmk-battery-bar
 ```
 brew install --cask itouuuuuuuuu/tap/zmk-battery-bar
 ```
 ### Prospector dongle
-https://github.com/carrefinho/prospector
+- https://github.com/carrefinho/prospector
 
 ## 3D print
-https://www.printables.com/model/566288-improved-supports-kailh-choc-ergonomic-sculpted-ke
-https://www.printables.com/model/400911-kailh-choc-ergonomic-sculpted-keycaps
-https://www.printables.com/model/840146-totem-redux + remixes
+- https://www.printables.com/model/566288-improved-supports-kailh-choc-ergonomic-sculpted-ke
+- https://www.printables.com/model/400911-kailh-choc-ergonomic-sculpted-keycaps
+- https://www.printables.com/model/840146-totem-redux + remixes
+
+## Other linka
+- https://github.com/mctechnology17/awesome-zmk
