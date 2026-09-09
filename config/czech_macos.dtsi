@@ -1,0 +1,86 @@
+/*
+ * macOS ABC Extended dead-key macros for Czech (and a few DE/SK) characters.
+ *
+ * Requires the ABC Extended (or equivalent) input source:
+ *   Acute  ⌥E + letter  → á é í ó ú ý ĺ ŕ
+ *   Caron  ⌥V + letter  → č ď ě ň ř š ť ž ľ
+ *   Ring   ⌥K + u       → ů
+ *   Umlaut ⌥U + letter  → ä ö ü
+ *   Circ   ⌥I + o       → ô
+ *   ß                   → ⌥S
+ */
+
+#define CS_DK_PAIR(name, dead, letter) \
+    / { \
+        macros { \
+            name ## _l: name ## _l { \
+                compatible = "zmk,behavior-macro"; \
+                #binding-cells = <0>; \
+                wait-ms = <0>; \
+                tap-ms = <0>; \
+                bindings = <&macro_tap &kp dead &kp letter>; \
+            }; \
+            name ## _u: name ## _u { \
+                compatible = "zmk,behavior-macro"; \
+                #binding-cells = <0>; \
+                wait-ms = <0>; \
+                tap-ms = <0>; \
+                bindings = <&macro_tap &kp dead &kp LS(letter)>; \
+            }; \
+        }; \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-mod-morph"; \
+                #binding-cells = <0>; \
+                bindings = <&name ## _l>, <&name ## _u>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+            }; \
+        }; \
+    };
+
+/* Acute ⌥E */
+CS_DK_PAIR(cs_aa,    RA(E), A) // á/Á
+CS_DK_PAIR(cs_ea,    RA(E), E) // é/É
+CS_DK_PAIR(cs_ia,    RA(E), I) // í/Í
+CS_DK_PAIR(cs_oa,    RA(E), O) // ó/Ó
+CS_DK_PAIR(cs_ua,    RA(E), U) // ú/Ú
+CS_DK_PAIR(cs_ya,    RA(E), Y) // ý/Ý
+CS_DK_PAIR(l_acute,  RA(E), L) // ĺ/Ĺ
+CS_DK_PAIR(r_acute,  RA(E), R) // ŕ/Ŕ
+
+/* Caron ⌥V */
+CS_DK_PAIR(cs_cc,    RA(V), C) // č/Č
+CS_DK_PAIR(cs_dc,    RA(V), D) // ď/Ď
+CS_DK_PAIR(cs_ec,    RA(V), E) // ě/Ě
+CS_DK_PAIR(cs_nc,    RA(V), N) // ň/Ň
+CS_DK_PAIR(cs_rc,    RA(V), R) // ř/Ř
+CS_DK_PAIR(cs_sc,    RA(V), S) // š/Š
+CS_DK_PAIR(cs_tc,    RA(V), T) // ť/Ť
+CS_DK_PAIR(cs_zc,    RA(V), Z) // ž/Ž
+CS_DK_PAIR(l_caron,  RA(V), L) // ľ/Ľ
+
+/* Ring ⌥K */
+CS_DK_PAIR(cs_ur,    RA(K), U) // ů/Ů
+
+/* Umlaut ⌥U */
+CS_DK_PAIR(a_dia,    RA(U), A) // ä/Ä
+CS_DK_PAIR(o_dia,    RA(U), O) // ö/Ö
+CS_DK_PAIR(u_dia,    RA(U), U) // ü/Ü
+
+/* Circumflex ⌥I */
+CS_DK_PAIR(o_circ,   RA(I), O) // ô/Ô
+
+/* ß — Option+S (no useful Shift variant on ABC Extended) */
+/ {
+    macros {
+        sharp_s: sharp_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp RA(S)>;
+        };
+    };
+};
+
+#undef CS_DK_PAIR
