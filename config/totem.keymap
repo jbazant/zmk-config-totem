@@ -21,6 +21,7 @@
 #define Czech   4
 
 // macOS Option shortcuts (Sym: work on US/ABC; dead keys need ABC Extended)
+
 #define MAC_EURO    LS(LA(N2)) // €
 #define MAC_SECT    LA(N6)     // §
 #define MAC_DEG     LS(LA(N8)) // °
@@ -56,6 +57,7 @@
 
         // Hold-tap always requires 2 binding cells in ZMK; tap side is 0-param
         // so the keymap passes a dummy 0 (ignored by the mod-morph).
+
         csdc_ht: hold_tap_cs_dc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -89,6 +91,7 @@
 
     // DE/SK: hold accent key on Czech layer + base letter.
     // Positions: caron=24(V), acute=22(X), diaer=25(B), A=10, O=8, U=6, L=18, R=3.
+
     combos {
         compatible = "zmk,combos";
 
@@ -152,52 +155,53 @@
         Base {
             display-name = "Base";
             bindings = <
-                                &kp Q             &kp W             &kp E             &kp R             &kp T                 &kp Y             &kp U             &kp I             &kp O             &kp P
-                                &hm LCTRL A       &hm LALT S        &hm LGUI D        &hm LSHIFT F      &kp G                 &kp H             &hm RSHFT J       &hm RGUI K        &hm RALT L        &hm RCTRL SEMICOLON
-                &lt Fun ESCAPE  &kp Z             &kp X             &kp C             &kp V             &kp B                 &kp N             &kp M             &kp COMMA         &kp DOT           &kp SLASH         &lt Czech APOSTROPHE
-                                                                    &mt LGUI DEL      &lt Nav TAB       &kp SPACE             &kp RET           &lt Sym BSPC      &lt Czech MINUS
+                &kp Q        &kp W       &kp E         &kp R         &kp T        &kp Y    &kp U         &kp I            &kp O       &kp P
+                &hm LCTRL A  &hm LALT S  &hm LGUI D    &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J   &hm RGUI K       &hm RALT L  &hm RCTRL SEMICOLON
+&lt Fun ESCAPE  &kp Z        &kp X       &kp C         &kp V         &kp B        &kp N    &kp M         &kp COMMA        &kp DOT     &kp SLASH            &lt Czech APOSTROPHE
+                                         &mt LGUI DEL  &lt Nav TAB   &kp SPACE    &kp RET  &lt Sym BSPC  &lt Czech MINUS
             >;
         };
 
         Nav {
             display-name = "Navigation";
             bindings = <
-                                &kp TILDE         &kp HOME          &kp UP_ARROW      &kp END           &kp PG_UP             &kp KP_DIVIDE     &kp NUMBER_7      &kp NUMBER_8      &kp NUMBER_9      &kp MINUS
-                                &trans            &hm LALT LEFT     &hm LGUI DOWN     &hm LSHIFT RIGHT  &kp PAGE_DOWN         &kp KP_MULTIPLY   &hm RSHFT NUMBER_4 &hm RGUI NUMBER_5 &hm RALT NUMBER_6 &hm RCTRL PLUS
-                &trans          &trans            &kp COMMA         &kp UNDER         &kp LPAR          &kp RPAR              &kp N0            &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp EQUAL         &trans
-                                                                    &trans            &trans            &trans                &trans            &trans            &kp DOT
+        &kp TILDE  &kp HOME       &kp UP_ARROW   &kp END           &kp PG_UP        &kp KP_DIVIDE    &kp NUMBER_7        &kp NUMBER_8       &kp NUMBER_9       &kp MINUS
+        &trans     &hm LALT LEFT  &hm LGUI DOWN  &hm LSHIFT RIGHT  &kp PAGE_DOWN    &kp KP_MULTIPLY  &hm RSHFT NUMBER_4  &hm RGUI NUMBER_5  &hm RALT NUMBER_6  &hm RCTRL PLUS
+&trans  &trans     &kp COMMA      &kp UNDER      &kp LPAR          &kp RPAR         &kp N0           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3       &kp EQUAL       &trans
+                                  &trans         &trans            &trans           &trans           &trans              &kp DOT
             >;
         };
 
         Sym {
             display-name = "Symbols";
             bindings = <
-                                &kp EXCL          &kp AT            &kp HASH          &kp DOLLAR        &kp PERCENT           &kp CARET         &kp AMPERSAND     &kp KP_ASTERISK   &kp SQT           &kp DQT
-                                &hm LCTRL MAC_DEG &hm LALT TILDE    &hm LGUI LBRC     &hm LSHIFT LBKT   &kp LPAR              &kp AT            &hm RSHFT MAC_EURO &hm RGUI MAC_SECT &trans            &hm RCTRL BACKSLASH
-                &trans          &trans            &trans            &kp RBRC          &kp RBKT          &kp RPAR              &kp MINUS         &kp EQUAL         &trans            &trans            &trans            &trans
-                                                                    &trans            &trans            &trans                &trans            &trans            &trans
+        &kp EXCL           &kp AT          &kp HASH       &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND       &kp KP_ASTERISK    &kp SQT  &kp DQT
+        &hm LCTRL MAC_DEG  &hm LALT TILDE  &hm LGUI LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT MAC_EURO  &hm RGUI MAC_SECT  &trans   &hm RCTRL BACKSLASH
+&trans  &trans             &trans          &kp RBRC       &kp RBKT         &kp RPAR       &kp MINUS  &kp EQUAL           &trans             &trans   &trans               &trans
+                                           &trans         &trans           &trans         &trans     &trans              &trans
             >;
         };
 
         Fun {
             display-name = "FN";
             bindings = <
-                                &trans            &trans            &kp C_MUTE        &kp C_VOL_DN      &kp C_VOL_UP          &kp F1            &kp F2            &kp F3            &kp F4            &kp F5
-                                &trans            &trans            &trans            &hm LSHIFT C_BRI_DEC &kp C_BRI_INC      &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
-                &trans          &trans            &trans            &kp C_PREV        &kp C_PP          &kp C_NEXT            &kp F12           &kp F12           &trans            &trans            &kp C_AL_COFFEE   &trans
-                                                                    &trans            &trans            &trans                &trans            &trans            &trans
+        &trans  &trans  &kp C_MUTE  &kp C_VOL_DN          &kp C_VOL_UP     &kp F11  &kp F12  &kp F13  &kp F14  &kp F15
+        &trans  &trans  &trans      &hm LSHIFT C_BRI_DEC  &kp C_BRI_INC    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+&trans  &trans  &trans  &kp C_PREV  &kp C_PP              &kp C_NEXT       &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp C_AL_COFFEE
+                        &trans      &trans                &trans           &trans   &trans   &trans
             >;
         };
 
         // Accented letters on matching base keys; ě on W, ů on J.
         // X/V/B = acute/caron/diaer dead keys for combos / manual compose.
+
         Czech {
             display-name = "Czech";
             bindings = <
-                                &trans            &cs_ec            &cs_ea            &cs_rc            &cs_tc                &cs_ya            &cs_ua            &cs_ia            &cs_oa            &trans
-                                &cs_aa            &cs_sc            &csdc_ht LCTRL 0  &trans            &trans                &trans            &csur_ht RSHFT 0  &trans            &o_circ           &trans
-                &trans          &cs_zc            &sharp_s          &cs_cc            &kp MAC_CARON     &kp MAC_DIAER         &csnc_ht RALT 0   &kp MAC_ACUTE     &trans            &trans            &trans            &trans
-                                                                    &trans            &trans            &trans                &trans            &trans            &trans
+        &trans  &cs_ec    &cs_ea            &cs_rc         &cs_tc           &cs_ya           &cs_ua            &cs_ia  &cs_oa   &trans
+        &cs_aa  &cs_sc    &csdc_ht LCTRL 0  &trans         &trans           &trans           &csur_ht RSHFT 0  &trans  &o_circ  &trans
+&trans  &cs_zc  &sharp_s  &cs_cc            &kp MAC_CARON  &kp MAC_DIAER    &csnc_ht RALT 0  &kp MAC_ACUTE     &trans  &trans   &trans  &trans
+                          &trans            &trans         &trans           &trans           &trans            &trans
             >;
         };
     };
