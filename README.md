@@ -44,5 +44,5 @@ brew install --cask itouuuuuuuuu/tap/zmk-battery-bar
 - https://www.printables.com/model/400911-kailh-choc-ergonomic-sculpted-keycaps
 - https://www.printables.com/model/840146-totem-redux + remixes
 
-## Other linka
+## Other links
 - https://github.com/mctechnology17/awesome-zmk
