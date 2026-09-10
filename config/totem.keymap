@@ -175,9 +175,9 @@
         Sym {
             display-name = "Symbols";
             bindings = <
-        &kp EXCL           &kp AT          &kp HASH       &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND       &kp KP_ASTERISK    &kp SQT  &kp DQT
-        &hm LCTRL MAC_DEG  &hm LALT TILDE  &hm LGUI LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT MAC_EURO  &hm RGUI MAC_SECT  &trans   &hm RCTRL BACKSLASH
-&trans  &trans             &trans          &kp RBRC       &kp RBKT         &kp RPAR       &kp MINUS  &kp EQUAL           &trans             &trans   &trans               &trans
+        &kp EXCL           &kp AT          &kp HASH       &kp DOLLAR       &kp PERCENT    &kp CARET  &kp AMPERSAND       &kp KP_ASTERISK    &kp SQT         &kp DQT
+        &hm LCTRL MAC_DEG  &hm LALT TILDE  &hm LGUI LBRC  &hm LSHIFT LBKT  &kp LPAR       &kp AT     &hm RSHFT MAC_EURO  &hm RGUI MAC_SECT  &hm RALT GRAVE  &hm RCTRL BACKSLASH
+&trans  &trans             &trans          &kp RBRC       &kp RBKT         &kp RPAR       &kp MINUS  &kp EQUAL           &kp PLUS           &trans          &trans               &kp GRAVE
                                            &trans         &trans           &trans         &trans     &trans              &trans
             >;
         };
