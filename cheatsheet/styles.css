@@ -1,0 +1,244 @@
+:root {
+  --bg: #1c1e22;
+  --key: #ffffff;
+  --key-border: #c5cad3;
+  --base: #e8eaed;
+  --key-label: #5c6370;
+  --key-label-strong: #1a1d24;
+  --nav: #d45b5b;
+  --sym: #9b6bd6;
+  --fun: #8a8296;
+  --czech: #5ecf8e;
+  --mod: #5b9fd4;
+  --mod-bg: rgba(91, 159, 212, 0.28);
+  --u: 72px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "SF Mono", "Menlo", "Consolas", ui-monospace, monospace;
+  background: radial-gradient(ellipse at 50% 0%, #2a3040 0%, var(--bg) 55%);
+  color: var(--base);
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  justify-content: center;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+}
+
+.swatch.mod {
+  background: var(--mod-bg);
+  border: 1px solid var(--mod);
+}
+
+.board-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  line-height: 0;
+  align-self: stretch;
+}
+
+.board {
+  position: relative;
+  width: calc(15.1 * var(--u));
+  height: calc(5.5 * var(--u));
+  transform-origin: top left;
+}
+
+.key {
+  position: absolute;
+  width: calc(1.059 * var(--u));
+  height: calc(1 * var(--u));
+  background: var(--key);
+  border: 1px solid var(--key-border);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transform-origin: center center;
+}
+
+.key.has-mod {
+  background:
+    linear-gradient(var(--mod-bg), var(--mod-bg)),
+    var(--key);
+  border-color: color-mix(in srgb, var(--mod) 45%, var(--key-border));
+}
+
+.key.layer-switch {
+  border-width: 2px;
+}
+
+.key .mod-label {
+  position: absolute;
+  bottom: 4px;
+  left: 6px;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: var(--mod);
+  opacity: 0.9;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.key .layers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px 4px;
+  width: 100%;
+  min-height: 1.2em;
+  align-content: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.key .layers:empty { min-height: 0; }
+
+.key .base {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--key-label);
+  line-height: 1.1;
+  margin: 1px 0;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.key .base .icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+
+.key .tap-hint {
+  font-size: 0.48rem;
+  opacity: 0.45;
+  line-height: 1;
+  color: var(--key-label);
+}
+
+.key.thumb .base {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--key-label-strong);
+  opacity: 1;
+}
+
+.key.thumb .base .icon {
+  width: 22px;
+  height: 22px;
+  opacity: 1;
+}
+
+.key.thumb .tap-hint {
+  font-size: 0.58rem;
+  opacity: 0.8;
+  font-weight: 600;
+  color: var(--key-label-strong);
+}
+
+.key.thumb .layers {
+  font-size: 0.85rem;
+}
+
+.c-nav   { color: var(--nav); }
+.c-sym   { color: var(--sym); }
+.c-fun   { color: var(--fun); font-weight: 400; font-size: 0.6rem; line-height: 1rem;}
+.c-czech { color: var(--czech); }
+
+.icon {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  vertical-align: -2px;
+  fill: currentColor;
+}
+
+.note {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  max-width: 40rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    padding: 0.5rem;
+    overflow: visible;
+    max-width: none;
+  }
+
+  .note { display: none; }
+
+  .board-wrap {
+    overflow: visible;
+    height: auto !important;
+  }
+
+  .board {
+    transform: none !important;
+  }
+
+  .key {
+    box-shadow: none;
+    background: #fff;
+  }
+
+  .key .base {
+    color: #666;
+  }
+
+  .key.thumb .base {
+    color: #111;
+  }
+}
