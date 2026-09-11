@@ -165,10 +165,10 @@
         Nav {
             display-name = "Navigation";
             bindings = <
-        &kp TILDE  &kp HOME       &kp UP_ARROW   &kp END           &kp PG_UP        &kp KP_DIVIDE    &kp NUMBER_7        &kp NUMBER_8       &kp NUMBER_9       &kp MINUS
-        &trans     &hm LALT LEFT  &hm LGUI DOWN  &hm LSHIFT RIGHT  &kp PAGE_DOWN    &kp KP_MULTIPLY  &hm RSHFT NUMBER_4  &hm RGUI NUMBER_5  &hm RALT NUMBER_6  &hm RCTRL PLUS
-&trans  &trans     &kp COMMA      &kp UNDER      &kp LPAR          &kp RPAR         &kp N0           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3       &kp EQUAL       &kp PERCENT
-                                  &trans         &trans            &trans           &trans           &trans              &kp DOT
+        &kp TILDE   &kp HOME       &kp UP_ARROW   &kp END           &kp PG_UP        &kp KP_DIVIDE    &kp NUMBER_7        &kp NUMBER_8       &kp NUMBER_9       &kp MINUS
+        &trans      &hm LALT LEFT  &hm LGUI DOWN  &hm LSHIFT RIGHT  &kp PAGE_DOWN    &kp KP_MULTIPLY  &hm RSHFT NUMBER_4  &hm RGUI NUMBER_5  &hm RALT NUMBER_6  &hm RCTRL PLUS
+&trans  &caps_word  &kp COMMA      &kp UNDER      &kp LPAR          &kp RPAR         &kp N0           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3       &kp EQUAL       &kp PERCENT
+                                   &trans         &trans            &trans           &trans           &trans              &kp DOT
             >;
         };
 
