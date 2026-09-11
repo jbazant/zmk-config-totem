@@ -68,7 +68,7 @@ const KEYS = [
 
   // 20–31 bottom alpha + outer
   { base: I.esc, layerSwitch: "Fun", tapHint: "Esc", overlays: {} },
-  { base: "Z", overlays: { Czech: "ž" } },
+  { base: "Z", overlays: { Nav: "Caps", Czech: "ž" } },
   { base: "X", overlays: { Nav: ",", Czech: "ß" } },
   { base: "C", overlays: { Nav: "_", Sym: "}", Fun: I.prev, Czech: "č" } },
   { base: "V", overlays: { Nav: "(", Sym: "]", Fun: I.play, Czech: "ˇ" } },
@@ -83,8 +83,8 @@ const KEYS = [
   // 32–37 thumbs
   { base: I.del, mod: "LGUI", tapHint: "Del", overlays: {} },
   { base: I.tab, layerSwitch: "Nav", tapHint: "Tab", overlays: {} },
-  { base: I.spc, tapHint: "Space", overlays: {} },
+  { base: I.spc, layerSwitch: "Czech", tapHint: "Space", overlays: {} },
   { base: I.ret, tapHint: "Enter", overlays: {} },
   { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: {} },
-  { base: "−", layerSwitch: "Czech", tapHint: "−", overlays: {} },
+  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: "." } },
 ];
