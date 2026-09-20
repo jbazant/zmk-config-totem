@@ -75,9 +75,9 @@ const KEYS = [
   { base: "B", overlays: { Nav: ")", Sym: ")", Fun: I.next, Czech: "¨" } },
   { base: "N", overlays: { Nav: "0", Sym: "−", Fun: "F1", Czech: "ň" } },
   { base: "M", overlays: { Nav: "1", Sym: "=", Fun: "F2", Czech: "´" } },
-  { base: ",", overlays: { Nav: "2", Fun: "F3" } },
-  { base: ".", overlays: { Nav: "3", Fun: "F4" } },
-  { base: "/", overlays: { Nav: "=", Fun: "F5" } },
+  { base: ",", overlays: { Nav: "2", Sym: "+", Fun: "F3" } },
+  { base: ".", overlays: { Nav: "3", Sym: "<", Fun: "F4" } },
+  { base: "/", overlays: { Nav: "=", Sym: ">", Fun: "F5" } },
   { base: "'", layerSwitch: "Czech", overlays: { Fun: I.coffee,  Nav: "%", Sym: "`"  } },
 
   // 32–37 thumbs
@@ -86,5 +86,5 @@ const KEYS = [
   { base: I.spc, layerSwitch: "Czech", tapHint: "Space", overlays: {} },
   { base: I.ret, tapHint: "Enter", overlays: {} },
   { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: {} },
-  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: "." } },
+  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: ".", Sym: "÷" } },
 ];

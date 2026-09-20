@@ -35,6 +35,7 @@ through `kp NUMBER_9` → `"1"`.."9"`.
 | MINUS | `−` (U+2212 minus sign, not a hyphen — matches the rest of the file) |
 | PLUS | `+` |
 | EQUAL | `=` |
+| LT / GT | `<` / `>` |
 | EXCL | `!` |
 | AT | `@` |
 | HASH | `#` |
