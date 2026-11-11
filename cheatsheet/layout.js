@@ -43,7 +43,7 @@ const LAYER_COLORS = {
 // Overlays ignore &trans; hm hold side not repeated (mod already on key)
 const KEYS = [
   // 0–9 top row
-  { base: "Q", overlays: { Nav: "~", Sym: "!" } },
+  { base: "Q", overlays: { Sym: "!" } },
   { base: "W", overlays: { Nav: I.home, Sym: "@", Czech: "ě" } },
   { base: "E", overlays: { Nav: I.up, Sym: "#", Fun: I.mute, Czech: "é" } },
   { base: "R", overlays: { Nav: I.end, Sym: "$", Fun: I.volDn, Czech: "ř" } },
@@ -63,28 +63,28 @@ const KEYS = [
   { base: "H", overlays: { Nav: "×", Sym: "@", Fun: "F6" } },
   { base: "J", mod: "RSHFT", overlays: { Nav: "4", Sym: "€", Fun: "F7", Czech: "ů" } },
   { base: "K", mod: "RGUI", overlays: { Nav: "5", Sym: "§", Fun: "F8" } },
-  { base: "L", mod: "RALT", overlays: { Nav: "6", Fun: "F9", Czech: "ô", Sym: "`" } },
+  { base: "L", mod: "RALT", overlays: { Nav: "6", Sym: "`", Fun: "F9", Czech: "ô" } },
   { base: ";", mod: "RCTRL", overlays: { Nav: "+", Sym: "\\", Fun: "F10" } },
 
   // 20–31 bottom alpha + outer
   { base: I.esc, layerSwitch: "Fun", tapHint: "Esc", overlays: {} },
   { base: "Z", overlays: { Nav: "Caps", Czech: "ž" } },
-  { base: "X", overlays: { Nav: ",", Czech: "ß" } },
-  { base: "C", overlays: { Nav: "_", Sym: "}", Fun: I.prev, Czech: "č" } },
-  { base: "V", overlays: { Nav: "(", Sym: "]", Fun: I.play, Czech: "ˇ" } },
-  { base: "B", overlays: { Nav: ")", Sym: ")", Fun: I.next, Czech: "¨" } },
+  { base: "X", overlays: { Czech: "ß" } },
+  { base: "C", overlays: { Sym: "}", Fun: I.prev, Czech: "č" } },
+  { base: "V", overlays: { Sym: "]", Fun: I.play, Czech: "ˇ" } },
+  { base: "B", overlays: { Sym: ")", Fun: I.next, Czech: "¨" } },
   { base: "N", overlays: { Nav: "0", Sym: "−", Fun: "F1", Czech: "ň" } },
   { base: "M", overlays: { Nav: "1", Sym: "=", Fun: "F2", Czech: "´" } },
   { base: ",", overlays: { Nav: "2", Sym: "+", Fun: "F3" } },
   { base: ".", overlays: { Nav: "3", Sym: "<", Fun: "F4" } },
   { base: "/", overlays: { Nav: "=", Sym: ">", Fun: "F5" } },
-  { base: "'", layerSwitch: "Czech", overlays: { Fun: I.coffee,  Nav: "%", Sym: "`"  } },
+  { base: "'", layerSwitch: "Czech", overlays: { Nav: "%", Sym: "`", Fun: I.coffee } },
 
   // 32–37 thumbs
   { base: I.del, mod: "LGUI", tapHint: "Del", overlays: {} },
-  { base: I.tab, layerSwitch: "Nav", tapHint: "Tab", overlays: {} },
-  { base: I.spc, layerSwitch: "Czech", tapHint: "Space", overlays: {} },
+  { base: I.tab, layerSwitch: "Czech", tapHint: "Tab", overlays: {} },
+  { base: I.spc, layerSwitch: "Nav", tapHint: "Space", overlays: {} },
   { base: I.ret, layerSwitch: "Nav", tapHint: "Enter", overlays: {} },
-  { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: {} },
-  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: ".", Sym: "÷" } },
+  { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: { Nav: "," } },
+  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: "." } },
 ];
