@@ -82,9 +82,9 @@ const KEYS = [
 
   // 32–37 thumbs
   { base: I.del, mod: "LGUI", tapHint: "Del", overlays: {} },
-  { base: I.tab, layerSwitch: "Nav", tapHint: "Tab", overlays: {} },
+  { base: I.tab, layerSwitch: "Sym", tapHint: "Tab", overlays: {} },
   { base: I.spc, layerSwitch: "Czech", tapHint: "Space", overlays: {} },
   { base: I.ret, tapHint: "Enter", overlays: {} },
-  { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: {} },
+  { base: I.bspc, layerSwitch: "Nav", tapHint: "Bksp", overlays: {} },
   { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: ".", Sym: "÷" } },
 ];
