@@ -84,7 +84,7 @@ const KEYS = [
   { base: I.del, mod: "LGUI", tapHint: "Del", overlays: {} },
   { base: I.tab, layerSwitch: "Nav", tapHint: "Tab", overlays: {} },
   { base: I.spc, layerSwitch: "Czech", tapHint: "Space", overlays: {} },
-  { base: I.ret, tapHint: "Enter", overlays: {} },
+  { base: I.ret, layerSwitch: "Nav", tapHint: "Enter", overlays: {} },
   { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: {} },
   { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: ".", Sym: "÷" } },
 ];
