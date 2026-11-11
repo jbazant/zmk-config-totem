@@ -85,6 +85,6 @@ const KEYS = [
   { base: I.tab, layerSwitch: "Czech", tapHint: "Tab", overlays: {} },
   { base: I.spc, layerSwitch: "Nav", tapHint: "Space", overlays: {} },
   { base: I.ret, layerSwitch: "Nav", tapHint: "Enter", overlays: {} },
-  { base: I.bspc, layerSwitch: "Sym", tapHint: "Bksp", overlays: { Nav: "," } },
-  { base: "−", layerSwitch: "Fun", tapHint: "−", overlays: { Nav: "." } },
+  { base: "−", layerSwitch: "Sym", overlays: { Nav: "," } },
+  { base: I.bspc, layerSwitch: "Fun", tapHint: "Bksp", overlays: { Nav: "." } },
 ];
