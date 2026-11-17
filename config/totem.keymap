@@ -165,9 +165,9 @@
         Nav {
             display-name = "Navigation";
             bindings = <
-        &trans      &kp HOME       &kp UP_ARROW   &kp END           &kp PG_UP        &kp KP_DIVIDE    &kp NUMBER_7        &kp NUMBER_8       &kp NUMBER_9       &kp MINUS
-        &trans      &hm LALT LEFT  &hm LGUI DOWN  &hm LSHIFT RIGHT  &kp PAGE_DOWN    &kp KP_MULTIPLY  &hm RSHFT NUMBER_4  &hm RGUI NUMBER_5  &hm RALT NUMBER_6  &hm RCTRL PLUS
-&trans  &caps_word  &trans         &trans         &trans            &trans           &kp N0           &kp NUMBER_1        &kp NUMBER_2       &kp NUMBER_3       &kp EQUAL       &kp PERCENT
+        &trans      &kp HOME       &kp UP_ARROW   &kp END           &kp PG_UP        &kp PLUS         &kp MINUS           &kp KP_MULTIPLY    &kp KP_DIVIDE      &kp EQUAL
+        &trans      &hm LALT LEFT  &hm LGUI DOWN  &hm LSHIFT RIGHT  &kp PAGE_DOWN    &kp NUMBER_1     &hm RSHFT NUMBER_2  &hm RGUI NUMBER_3  &hm RALT NUMBER_4  &hm RCTRL NUMBER_5
+&trans  &caps_word  &trans         &trans         &trans            &trans           &kp NUMBER_6     &kp NUMBER_7        &kp NUMBER_8       &kp NUMBER_9       &kp NUMBER_0    &kp PERCENT
                                    &trans         &trans            &trans           &trans           &kp COMMA           &kp DOT
             >;
         };
